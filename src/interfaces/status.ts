@@ -1,12 +1,12 @@
 import { Visibility } from 'src/types/visibility';
-import { User } from './user.interface';
+import { IUser } from './user';
 
-export interface Status {
+export interface IStatus {
   id: string;
   createdAt: Date;
   text: string | null;
   contentWarning: string | null;
   visibility: Visibility;
-  user: User;
+  user: IUser;
   isFederated: boolean;
 }

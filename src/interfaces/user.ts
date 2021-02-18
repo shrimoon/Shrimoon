@@ -1,6 +1,6 @@
 import { Gender } from 'src/types/gender';
 
-export interface User {
+export interface IUser {
   id: string;
   createdAt: Date;
   updatedAt: Date;
