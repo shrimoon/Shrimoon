@@ -8,17 +8,15 @@ import { StatusService } from './services/status';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { databaseSettings } from './env';
 import { AuthController } from './controllers/api/v1/auth';
-import { FrontendModule } from './modules/frontend';
 
 @Module({
   imports: [
     TypeOrmModule.forRoot({
       ...databaseSettings,
       type: 'postgres',
-      entities: [`dist/entities/*.js`],
+      entities: ['dist/entities/*.js'],
       synchronize: false,
     }),
-    FrontendModule,
   ],
   controllers: [
     AppController,
