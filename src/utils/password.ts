@@ -8,7 +8,7 @@ export const generatePasswordAsync = async (password: string, length = 64) => {
   return [p.toString('base64'), saltBuffer.toString('base64'), length].join();
 };
 
-export const comparePasswordAsync = async (
+export const verifyPasswordAsync = async (
   password: string,
   hashedPassword: string,
 ) => {
