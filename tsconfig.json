@@ -14,7 +14,7 @@
     "sourceMap": true,
     "outDir": "./dist",
     "baseUrl": "./",
-    "incremental": true
+    "incremental": true,
   },
   "exclude": ["migration", "frontend"]
 }
