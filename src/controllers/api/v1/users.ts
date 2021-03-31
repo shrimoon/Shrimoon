@@ -34,7 +34,7 @@ export class UsersController {
     };
   }
 
-  @Post(':name')
+  @Post('new/:name')
   async createUser(@Param('name') name: string, @Body() body: CreateUserBody) {
     const u = await this.userService.findByNameAsync(name);
     if (u) {
