@@ -8,6 +8,7 @@ import { StatusService } from './services/status';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { databaseSettings } from './env';
 import { AuthController } from './controllers/api/v1/auth';
+import { MetaController } from './controllers/api/v1/meta';
 
 @Module({
   imports: [
@@ -23,6 +24,7 @@ import { AuthController } from './controllers/api/v1/auth';
     UsersController,
     StatusController,
     AuthController,
+    MetaController,
   ],
   providers: [AppService, UserService, StatusService],
 })

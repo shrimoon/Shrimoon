@@ -41,6 +41,10 @@ export class UserService {
     return u ?? null;
   }
 
+  async countAsync(): Promise<number> {
+    return User.count();
+  }
+
   async packAsync(user: User): Promise<IUser> {
     return {
       id: user.id,
