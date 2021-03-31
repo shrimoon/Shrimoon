@@ -15,6 +15,10 @@ async function bootstrap() {
   );
   app.useGlobalPipes(new ValidationPipe());
   app.useGlobalFilters(new ErrorFilter());
+  app.enableCors({
+    origin: '*',
+    allowedHeaders: 'Origin, X-Requested-With, Content-Type, Accept',
+  });
   app.listen(serverSettings.port);
 }
 bootstrap();
